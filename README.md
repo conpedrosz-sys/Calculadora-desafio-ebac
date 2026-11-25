@@ -1,84 +1,180 @@
-# Calculadora-desafio-ebac
-
 # 🧮 Calculadora em Python
 
-## 📌 Descrição
+## Descrição do projeto
 
-Projeto de uma calculadora básica desenvolvida em Python, executada via terminal, que permite ao usuário realizar as quatro operações matemáticas fundamentais.
+Este projeto consiste em uma calculadora básica desenvolvida em Python,
+com execução via terminal e integração com Shell Script.
 
-## 🎯 Objetivo
+O projeto foi desenvolvido como atividade prática do módulo de Linux,
+durante o curso de Analista de Dados da EBAC.
 
-Este projeto foi desenvolvido com o objetivo de praticar e consolidar os conhecimentos fundamentais em programação Python, como parte da minha formação em Análise de Dados pela EBAC.
+## Objetivos
 
-## ⚙️ Funcionalidades
+- Praticar lógica de programação em Python.
+- Aprender a executar scripts pelo terminal Linux.
+- Utilizar Shell Script para execução de programas.
+- Praticar versionamento de código com Git e GitHub.
+- Desenvolver documentação técnica utilizando Markdown.
+
+## Tecnologias utilizadas
+
+- Python 3
+- Linux
+- Shell Script
+- Jupyter Notebook
+- Git
+- GitHub
+- Markdown
+
+## Estrutura do projeto
+
+```text
+├── .gitattributes
+├── calculadora.py
+├── calculadoralogicaprogram.ipynb
+├── executarcalculadora.sh
+└── README.md
+```
+
+| Arquivo | Descrição |
+|---|---|
+| `calculadora.py` | Código-fonte da calculadora. |
+| `calculadoralogicaprogram.ipynb` | Notebook de estudo da lógica de programação. |
+| `executarcalculadora.sh` | Script Shell para execução da calculadora. |
+| `.gitattributes` | Configuração dos atributos dos arquivos no Git. |
+| `README.md` | Documentação do projeto. |
+
+## Funcionalidades
+
+A calculadora permite realizar quatro operações matemáticas:
 
 - Adição (+)
 - Subtração (-)
 - Multiplicação (*)
 - Divisão (/)
-- Entrada de números inteiros pelo usuário.
-- Identificação de operadores inválidos.
-- Exibição dos resultados no terminal.
 
-## 🛠️ Tecnologias utilizadas
+O programa também informa quando o usuário digita uma operação inválida.
 
-- Python 3
-- Linux
-- Git
-- GitHub
-
-## 📚 Conhecimentos aplicados
-
-- Declaração de variáveis.
-- Tipos de dados.
-- Entrada de dados com `input()`.
-- Saída de dados com `print()`.
-- Conversão de tipos com `int()`.
-- Operadores aritméticos.
-- Operadores de comparação.
-- Estruturas condicionais (`if`, `elif` e `else`).
-
-## 📂 Estrutura do projeto
-
-```text
-calculadora-python/
-├── calculadora.py
-└── README.md
-```
-
-## 🚀 Como executar o projeto
+## Como executar o arquivo .sh
 
 ### Pré-requisitos
 
 - Python 3 instalado.
-- Terminal Linux ou ambiente compatível com Bash.
+- Linux ou ambiente compatível com Shell Script.
 
-### Opção 1 — Executando diretamente pelo Python
+### Passo 1 — Acessar o diretório
 
-```bash
-python3 calculadora.py
-```
+Abra o terminal e acesse a pasta onde estão os arquivos do projeto.
 
-### Opção 2 — Executando pelo Shell Script
+### Passo 2 — Conceder permissão de execução
 
-Conceda permissão de execução ao arquivo:
+Execute o seguinte comando:
 
 ```bash
 chmod +x executarcalculadora.sh
 ```
 
-Em seguida, execute:
+O comando `chmod +x` adiciona a permissão de execução ao arquivo.
+
+### Passo 3 — Executar o Shell Script
 
 ```bash
 ./executarcalculadora.sh
 ```
 
-3. Informe o primeiro número.
-4. Informe o segundo número.
-5. Escolha a operação matemática.
-6. Visualize o resultado no terminal.
+O Shell Script inicia o programa da calculadora em Python.
 
-## 💻 Exemplo de execução
+### Execução alternativa
+
+Também é possível executar o código Python diretamente:
+
+```bash
+python3 calculadora.py
+```
+
+## Explicação do código Python
+
+### 1. Interpretador Python
+
+```python
+#!/usr/bin/env python3
+```
+
+Essa linha é conhecida como shebang e indica que o script deve
+ser executado utilizando o interpretador Python 3 quando chamado
+diretamente em um sistema compatível.
+
+### 2. Inicialização do programa
+
+```python
+print("Iniciando Calculadora")
+```
+
+A função `print()` exibe uma mensagem no terminal,
+informando que a calculadora foi iniciada.
+
+### 3. Entrada de dados
+
+```python
+num1 = input('digite o primeiro número: ')
+num2 = input('digite o segundo número: ')
+```
+
+A função `input()` permite que o usuário informe dois valores.
+
+Os valores recebidos são armazenados nas variáveis `num1` e `num2`
+inicialmente como strings (texto).
+
+### 4. Conversão dos valores
+
+```python
+convert_valor1 = int(num1)
+convert_valor2 = int(num2)
+```
+
+A função `int()` converte os valores recebidos em números inteiros,
+permitindo a realização das operações matemáticas.
+
+### 5. Escolha da operação matemática
+
+```python
+op = input('digite a operação (+, -, *, /): ')
+```
+
+O usuário informa qual operação deseja realizar.
+
+A operação escolhida é armazenada na variável `op`.
+
+### 6. Estruturas condicionais
+
+```python
+if op == '+':
+    print('O valor da soma é de:', convert_valor1 + convert_valor2)
+elif op == '-':
+    print('O valor da subtração é de:', convert_valor1 - convert_valor2)
+elif op == '*':
+    print('O valor da multiplicação é de:', convert_valor1 * convert_valor2)
+elif op == '/':
+    print('O valor da divisão é de:', convert_valor1 / convert_valor2)
+else:
+    print('Operação inválida')
+```
+
+As estruturas condicionais `if`, `elif` e `else` são utilizadas
+para verificar qual operação foi escolhida pelo usuário.
+
+- `if`: verifica a primeira condição.
+- `elif`: verifica condições alternativas.
+- `else`: é executado quando nenhuma das condições anteriores é verdadeira.
+- `==`: operador de comparação utilizado para verificar a igualdade.
+
+Após identificar a operação, o programa realiza o cálculo
+e apresenta o resultado utilizando a função `print()`.
+
+Caso nenhuma operação válida seja informada, o programa
+exibe a mensagem "Operação inválida".
+
+## Exemplo de execução
 
 ```text
 Iniciando Calculadora
@@ -90,15 +186,17 @@ digite a operação (+, -, *, /): +
 O valor da soma é de: 15
 ```
 
-## ⚠️ Limitações atuais
+## Limitações atuais
 
 - Aceita apenas números inteiros como entrada.
 - Não possui tratamento de divisão por zero.
 - Não possui tratamento de entradas não numéricas.
-- Realiza apenas uma operação por execução.
+- Realiza uma operação por execução.
 
-## 👨‍💻 Autor
 
-Desenvolvido por Pedro.
+## Autor
 
-Projeto educacional desenvolvido durante minha jornada de formação em Análise de Dados pela EBAC.
+Pedro
+
+Projeto desenvolvido para fins educacionais durante o curso
+de Analista de Dados da EBAC.
