@@ -50,15 +50,27 @@ calculadora-python/
 
 ### Pré-requisitos
 
-- Possuir o Python 3 instalado.
+- Python 3 instalado.
+- Terminal Linux ou ambiente compatível com Bash.
 
-### Execução
-
-1. Acesse o diretório do projeto pelo terminal.
-2. Execute o comando abaixo:
+### Opção 1 — Executando diretamente pelo Python
 
 ```bash
 python3 calculadora.py
+```
+
+### Opção 2 — Executando pelo Shell Script
+
+Conceda permissão de execução ao arquivo:
+
+```bash
+chmod +x executarcalculadora.sh
+```
+
+Em seguida, execute:
+
+```bash
+./executarcalculadora.sh
 ```
 
 3. Informe o primeiro número.
