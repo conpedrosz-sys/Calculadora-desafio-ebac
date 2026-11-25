@@ -31,7 +31,6 @@ durante o curso de Analista de Dados da EBAC.
 ```text
 ├── .gitattributes
 ├── calculadora.py
-├── calculadoralogicaprogram.ipynb
 ├── executarcalculadora.sh
 └── README.md
 ```
@@ -39,7 +38,6 @@ durante o curso de Analista de Dados da EBAC.
 | Arquivo | Descrição |
 |---|---|
 | `calculadora.py` | Código-fonte da calculadora. |
-| `calculadoralogicaprogram.ipynb` | Notebook de estudo da lógica de programação. |
 | `executarcalculadora.sh` | Script Shell para execução da calculadora. |
 | `.gitattributes` | Configuração dos atributos dos arquivos no Git. |
 | `README.md` | Documentação do projeto. |
